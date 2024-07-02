@@ -1,1 +1,2 @@
-# ML---Supervised-Learning
+# Machine Learning
+Supervised Learning
