@@ -1,7 +1,3 @@
-Sure! Here’s the complete README file for your GitHub repository in Markdown format:
-
----
-
 # Linear Regression with Cost Function and Gradient Descent
 
 ## Overview
@@ -74,7 +70,7 @@ Two versions of the cost function are implemented:
 
 The cost function is defined as:
 
-\[ J(w, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \]
+$\[ J(w, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \]$
 
 where:
 - \( w \) is the weight (slope)
@@ -87,11 +83,11 @@ where:
 Gradient descent is used to minimize the cost function by iteratively updating the weight and bias:
 
 - **Update Equations**:
-  - \( w := w - \alpha \cdot \frac{\partial J}{\partial w} \)
-  - \( b := b - \alpha \cdot \frac{\partial J}{\partial b} \)
+  - $\( w := w - \a\cdot \frac{\partial J}{\partial w} \)$
+  - $\( b := b - \a\cdot \frac{\partial J}{\partial b} \)$
 
 where:
-- \( \alpha \) is the learning rate
+- \( a \) is the learning rate
 
 The gradient descent function performs updates based on the gradients of the cost function:
 
