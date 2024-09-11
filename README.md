@@ -45,7 +45,7 @@ For the dataset `Real_Estate.csv`, which contains information on house prices an
 
 For the dataset `Housing.csv`, which contains information on house prices and their respective areas, the columns of interest are:
 
-- `Area`: Area of the house (in years)
+- `Area`: Area of the house (in sq.feet)
 - `House price`: Price per unit area of the house (in dollars)
 
 ## Computation 
