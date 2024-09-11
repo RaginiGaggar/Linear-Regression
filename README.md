@@ -17,8 +17,7 @@ This project implements linear regression from scratch, including the calculatio
 ## Project Structure
 
 - `linear_regression.ipynb`: Jupyter notebook containing the code for linear regression, cost function computation, and gradient descent.
-- `Real_Estate.csv`: Dataset used for demonstration.
-- `README.md`: This file.
+- `Real_Estate.csv` and `Housing.csv`: Dataset used for demonstration.
 
 ## Dependencies
 
@@ -39,12 +38,17 @@ pip install pandas matplotlib numpy scienceplots seaborn plotly
 
 ## Data
 
-The dataset used is `Real_Estate.csv`, which contains information on house prices and their respective areas. The columns of interest are:
+For the dataset `Real_Estate.csv`, which contains information on house prices and their respective areas, the columns of interest are:
 
 - `House age`: Age of the house (in years)
 - `House price of unit area`: Price per unit area of the house (in dollars)
 
-## Computation
+For the dataset `Housing.csv`, which contains information on house prices and their respective areas, the columns of interest are:
+
+- `Area`: Area of the house (in years)
+- `House price`: Price per unit area of the house (in dollars)
+
+## Computation 
 
 ### Cost Function
 
