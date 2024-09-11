@@ -131,4 +131,3 @@ A contour plot visualizes the cost function with contour lines, along with the g
 
 ---
 
-This README should provide a clear and detailed explanation of your project's code and visualizations. Feel free to adjust or expand upon it as needed!
