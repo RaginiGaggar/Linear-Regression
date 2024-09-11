@@ -38,6 +38,7 @@ pip install pandas matplotlib numpy scienceplots seaborn plotly
 
 ## Data
 
+The datasets have been taken from Kaggle
 For the dataset `Real_Estate.csv`, which contains information on house prices and their respective areas, the columns of interest are:
 
 - `House age`: Age of the house (in years)
