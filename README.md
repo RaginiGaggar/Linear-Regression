@@ -1,4 +1,4 @@
-# Linear Regression with Cost Function and Gradient Descent
+# Linear Regression From Scratch with Cost Function and Gradient Descent
 
 ## Overview
 
