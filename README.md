@@ -70,7 +70,7 @@ Two versions of the cost function are implemented:
 
 The cost function is defined as:
 
-$\[ J(w, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \]$
+$\ J(w, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \$
 
 where:
 - \( w \) is the weight (slope)
@@ -83,8 +83,8 @@ where:
 Gradient descent is used to minimize the cost function by iteratively updating the weight and bias:
 
 - **Update Equations**:
-  - $\( w := w - \a\cdot \frac{\partial J}{\partial w} \)$
-  - $\( b := b - \a\cdot \frac{\partial J}{\partial b} \)$
+  - $\( w := w - a\cdot \frac{\partial J}{\partial w} \)$
+  - $\( b := b - a\cdot \frac{\partial J}{\partial b} \)$
 
 where:
 - \( a \) is the learning rate
