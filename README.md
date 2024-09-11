@@ -1,4 +1,4 @@
-Here's a comprehensive and well-structured README file in Markdown format for your linear regression project. This will help make your GitHub repository informative and impressive.
+Sure! Here’s the complete README file for your GitHub repository in Markdown format:
 
 ---
 
@@ -17,12 +17,6 @@ This project implements linear regression from scratch, including the calculatio
   - [Cost Function](#cost-function)
   - [Gradient Descent](#gradient-descent)
 - [Visualization](#visualization)
-  - [Cost vs Weight](#cost-vs-weight)
-  - [Cost vs Bias](#cost-vs-bias)
-  - [3D Cost Surface](#3d-cost-surface)
-  - [Contour Plot](#contour-plot)
-- [Usage](#usage)
-- [License](#license)
 
 ## Project Structure
 
@@ -61,11 +55,26 @@ The dataset used is `Real_Estate.csv`, which contains information on house price
 Two versions of the cost function are implemented:
 
 1. **Iterative Approach**: Calculates the cost using a loop.
+
+    ```python
+    def cost_function(x, y, w, b):
+        total_cost = 0
+        for i in range(n):
+            total_cost += (y[i] - (w*x[i] + b))**2
+        return total_cost / float(n)
+    ```
+
 2. **Vectorized Approach**: Uses NumPy operations to compute the cost more efficiently.
+
+    ```python
+    def vectorised_cost_function(x, y, w, b):
+        total_cost = np.sum((y - (w*x + b))**2) / (2*n)
+        return total_cost
+    ```
 
 The cost function is defined as:
 
-\[ J(w, b) = \frac{1}{n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \]
+\[ J(w, b) = \frac{1}{2n} \sum_{i=1}^{n} (y_i - (w \cdot x_i + b))^2 \]
 
 where:
 - \( w \) is the weight (slope)
@@ -84,7 +93,27 @@ Gradient descent is used to minimize the cost function by iteratively updating t
 where:
 - \( \alpha \) is the learning rate
 
-The gradient descent function performs updates based on the gradients of the cost function.
+The gradient descent function performs updates based on the gradients of the cost function:
+
+```python
+def gradient_descent(x, y, w, b, a, iterations):
+    w_history = []
+    b_history = []
+    cost_history = []
+
+    for i in range(iterations):
+        dw = -(2/n) * np.sum((y - (w*x + b)) * x)
+        db = -(2/n) * np.sum(y - (w*x + b))
+
+        w_history.append(w)
+        b_history.append(b)
+        cost_history.append(vectorised_cost_function(x, y, w, b))
+
+        w = w - a * dw
+        b = b - a * db
+
+    return w, b, w_history, b_history, cost_history
+```
 
 ## Visualization
 
@@ -104,18 +133,6 @@ A 3D surface plot shows the cost function in relation to both weight and bias, p
 
 A contour plot visualizes the cost function with contour lines, along with the gradient descent path overlaid to show the optimization trajectory.
 
-## Usage
-
-To run the analysis:
-
-1. Ensure all dependencies are installed.
-2. Place the `Real_Estate.csv` file in the working directory.
-3. Open and execute the `linear_regression.ipynb` notebook in Jupyter Notebook.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
-Feel free to adjust any sections or add more details as needed!
+This README should provide a clear and detailed explanation of your project's code and visualizations. Feel free to adjust or expand upon it as needed!
